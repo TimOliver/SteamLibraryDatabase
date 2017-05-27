@@ -1,0 +1,44 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - Realm (2.7.0):
+    - Realm/Headers (= 2.7.0)
+  - Realm+JSON (0.2.16):
+    - Realm
+  - Realm/Headers (2.7.0)
+
+DEPENDENCIES:
+  - AFNetworking
+  - Realm
+  - Realm+JSON (from `https://github.com/TimOliver/Realm-JSON.git`)
+
+EXTERNAL SOURCES:
+  Realm+JSON:
+    :git: https://github.com/TimOliver/Realm-JSON.git
+
+CHECKOUT OPTIONS:
+  Realm+JSON:
+    :commit: 44dd6bc0e330626c2849cfcab0601a3c41d8da20
+    :git: https://github.com/TimOliver/Realm-JSON.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
+  Realm+JSON: 8799479b330b5d696e93356dc277b2bc329c9644
+
+PODFILE CHECKSUM: dca06d2e14d58a0dd92518ff84257b572798c6ce
+
+COCOAPODS: 1.2.1
