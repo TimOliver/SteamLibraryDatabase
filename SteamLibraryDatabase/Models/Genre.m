@@ -25,4 +25,12 @@
              };
 }
 
++ (NSDictionary *)preprocessedJSON:(NSDictionary *)dictionary
+{
+    // Convert ID to int
+    NSMutableDictionary *dict = [dictionary mutableCopy];
+    dict[@"id"] = @([dict[@"id"] intValue]);
+    return dict;
+}
+
 @end

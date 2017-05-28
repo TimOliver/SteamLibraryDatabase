@@ -133,6 +133,7 @@
     configuration.objectClasses = @[[Category class], [Developer class], [Game class],
                                     [Genre class], [Movie class], [PlatformRequirements class],
                                     [Publisher class], [Screenshot class]];
+    configuration.deleteRealmIfMigrationNeeded = YES;
     return configuration;
 }
 

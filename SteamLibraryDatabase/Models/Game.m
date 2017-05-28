@@ -16,13 +16,15 @@
 {
     return @{@"name" : @"name",
              @"steam_appid" : @"appID",
-             @"release_date.date" : @"releaseDate",
+             @"release_date" : @"releaseDate",
              @"website" : @"website",
              @"detailed_description" : @"detailedDescription",
              @"about_the_game" : @"aboutDescription",
              @"short_description" : @"shortDescription",
              @"supported_languages" : @"languages",
              @"screenshots" : @"screenshots",
+             @"genres" : @"genres",
+             @"categories" : @"categories",
              @"movies" : @"movies",
              @"developers" : @"developers",
              @"publishers" : @"publishers",
@@ -63,6 +65,15 @@
         game[@"developers"] = newDevelopers;
     }
 
+    // Convert date format from Steam to NSDate standard
+    NSString *releaseDate = game[@"release_date"][@"date"];
+    NSDateFormatter *dateFromFormatter = [[NSDateFormatter alloc] init];
+    dateFromFormatter.dateFormat = @"MMM d, yyyy";
+    NSDate *date = [dateFromFormatter dateFromString:releaseDate];
+
+    NSDateFormatter *dateToFormatter = [[NSDateFormatter alloc] init];
+    dateToFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
+    game[@"release_date"] = [dateToFormatter stringFromDate:date];
 
     return game;
 }

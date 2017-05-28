@@ -14,6 +14,8 @@
 #import "Movie.h"
 #import "Game.h"
 #import "Screenshot.h"
+#import "Category.h"
+#import "Genre.h"
 
 @interface Game : RLMObject
 
@@ -26,6 +28,9 @@
 @property (nonatomic, copy) NSString *aboutDescription;
 @property (nonatomic, copy) NSString *shortDescription;
 @property (nonatomic, copy) NSString *languages;
+
+@property (nonatomic, strong) RLMArray<Category *><Category> *categories;
+@property (nonatomic, strong) RLMArray<Genre *><Genre> *genres;
 
 @property (nonatomic, strong) RLMArray<Screenshot *><Screenshot> *screenshots;
 @property (nonatomic, strong) RLMArray<Movie *><Movie> *movies;
