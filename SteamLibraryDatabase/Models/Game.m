@@ -12,7 +12,6 @@
 
 + (NSString *)primaryKey { return @"appID"; }
 
-
 + (NSDictionary *)JSONInboundMappingDictionary
 {
     return @{@"name" : @"name",
@@ -32,6 +31,40 @@
              @"linux_requirements" : @"linuxRequirements",
              @"header_image" : @"headerImageURL",
              @"background" : @"backgroundImageURL"};
+}
+
++ (NSDictionary *)preprocessedJSON:(NSDictionary *)dictionary
+{
+    // Convert Developers and Publishers to Objects
+
+    NSMutableDictionary *game = [dictionary mutableCopy];
+
+    NSArray *publishers = game[@"publishers"];
+    if (publishers.count) {
+        NSMutableArray *newPublishers = [NSMutableArray array];
+
+        for (NSString *publisher in publishers) {
+            NSDictionary *publisherDict = @{@"name" : publisher};
+            [newPublishers addObject:publisherDict];
+        }
+
+        game[@"publishers"] = newPublishers;
+    }
+
+    NSArray *developers = game[@"developers"];
+    if (developers.count) {
+        NSMutableArray *newDevelopers = [NSMutableArray array];
+
+        for (NSString *developer in developers) {
+            NSDictionary *developerDict = @{@"name" : developer};
+            [newDevelopers addObject:developerDict];
+        }
+
+        game[@"developers"] = newDevelopers;
+    }
+
+
+    return game;
 }
 
 @end

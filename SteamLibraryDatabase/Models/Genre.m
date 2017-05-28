@@ -7,6 +7,7 @@
 //
 
 #import "Genre.h"
+#import "Game.h"
 
 @implementation Genre
 
@@ -16,6 +17,12 @@
 {
     return @{@"id" : @"genreID",
              @"description" : @"name"};
+}
+
++ (NSDictionary *)linkingObjectsProperties {
+    return @{
+             @"games": [RLMPropertyDescriptor descriptorWithClass:Game.class propertyName:@"genres"],
+             };
 }
 
 @end

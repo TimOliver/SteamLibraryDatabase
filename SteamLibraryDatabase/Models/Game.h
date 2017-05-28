@@ -27,11 +27,11 @@
 @property (nonatomic, copy) NSString *shortDescription;
 @property (nonatomic, copy) NSString *languages;
 
-@property (nonatomic, strong) RLMArray<Screenshot *> *screenshots;
-@property (nonatomic, strong) RLMArray<Movie *> *movies;
+@property (nonatomic, strong) RLMArray<Screenshot *><Screenshot> *screenshots;
+@property (nonatomic, strong) RLMArray<Movie *><Movie> *movies;
 
-@property (nonatomic, strong) RLMArray<Developer *> *developers;
-@property (nonatomic, strong) RLMArray<Publisher *> *publishers;
+@property (nonatomic, strong) RLMArray<Developer *><Developer> *developers;
+@property (nonatomic, strong) RLMArray<Publisher *><Publisher> *publishers;
 
 @property (nonatomic, strong) PlatformRequirements *pcRequirements;
 @property (nonatomic, strong) PlatformRequirements *macRequirements;

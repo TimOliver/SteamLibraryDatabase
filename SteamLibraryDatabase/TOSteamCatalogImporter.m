@@ -78,7 +78,50 @@
 
 - (void)importApp:(App *)app
 {
-    
+    NSString *formattedAppURL = [NSString stringWithFormat:kTOSteamAppURL, @(app.appID)];
+    NSURL *URL = [NSURL URLWithString:formattedAppURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+
+    NSURLSessionDataTask *task = [self.sessionManager dataTaskWithRequest:request completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"%@", error.localizedDescription);
+            return ;
+        }
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self importApp:app withResponse:responseObject];
+        });
+    }];
+    [task resume];
+}
+
+- (void)importApp:(App *)app withResponse:(NSDictionary *)response
+{
+    // Key is the ID number of the app
+    NSString *key = response.allKeys.firstObject;
+
+    // If this is not a game, mark it as 'done' and move on
+    NSDictionary *data = response[key][@"data"];
+    if ([data[@"type"] isEqualToString:@"game"] == NO) {
+        [app.realm transactionWithBlock:^{
+            app.downloaded = YES;
+        }];
+
+        return;
+    }
+
+    Game *game = [[Game alloc] initWithJSONDictionary:data];
+
+    // Save the game to our Realm
+    RLMRealm *catalogRealm = self.catalogRealm;
+    [catalogRealm transactionWithBlock:^{
+        [Game createOrUpdateInRealm:catalogRealm withValue:game];
+    }];
+
+    // Mark it as done in the cache Realm
+    [app.realm transactionWithBlock:^{
+        app.downloaded = YES;
+    }];
 }
 
 #pragma mark - Apps Realm -

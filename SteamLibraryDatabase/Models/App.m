@@ -19,4 +19,9 @@
 
 + (NSString *)primaryKey { return @"appID"; }
 
++ (NSDictionary *)defaultPropertyValues
+{
+    return @{@"downloaded" : @(NO) };
+}
+
 @end

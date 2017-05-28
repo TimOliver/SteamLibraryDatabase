@@ -11,6 +11,7 @@
 @interface Developer : RLMObject
 
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, readonly) RLMLinkingObjects *games;
 
 @end
 

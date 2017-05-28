@@ -7,9 +7,16 @@
 //
 
 #import "Publisher.h"
+#import "Game.h"
 
 @implementation Publisher
 
 + (NSString *)primaryKey { return @"name"; }
+
++ (NSDictionary *)linkingObjectsProperties {
+    return @{
+             @"games": [RLMPropertyDescriptor descriptorWithClass:Game.class propertyName:@"publishers"],
+             };
+}
 
 @end

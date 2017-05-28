@@ -12,6 +12,7 @@
 
 @property (nonatomic, assign) int64_t genreID;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, readonly) RLMLinkingObjects *games;
 
 @end
 
