@@ -10,4 +10,6 @@
 
 @implementation Publisher
 
++ (NSString *)primaryKey { return @"name"; }
+
 @end

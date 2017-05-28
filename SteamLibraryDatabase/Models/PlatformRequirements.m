@@ -10,4 +10,10 @@
 
 @implementation PlatformRequirements
 
++ (NSDictionary *)JSONInboundMappingDictionary
+{
+    return @{@"minimum" : @"minimumRequirements",
+             @"recommended" : @"recommendedRequirements"};
+}
+
 @end

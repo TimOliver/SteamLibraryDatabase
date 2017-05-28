@@ -10,6 +10,11 @@
 
 @implementation Screenshot
 
-
++ (NSDictionary *)JSONInboundMappingDictionary
+{
+    return @{@"id" : @"screenshotID",
+             @"path_thumbnail" : @"thumbnailURL",
+             @"path_full" : @"fullImageURL"};
+}
 
 @end

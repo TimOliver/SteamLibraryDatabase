@@ -10,7 +10,7 @@
 
 @interface Genre : RLMObject
 
-@property (nonatomic, assign) uint64_t genreID;
+@property (nonatomic, assign) int64_t genreID;
 @property (nonatomic, copy) NSString *name;
 
 @end

@@ -10,8 +10,10 @@
 
 @interface Category : RLMObject
 
-@property (nonatomic, assign) uint64_t categoryID;
+@property (nonatomic, assign) int64_t categoryID;
 @property (nonatomic, copy) NSString *name;
+
+@property (nonatomic, readonly) RLMLinkingObjects *games;
 
 @end
 

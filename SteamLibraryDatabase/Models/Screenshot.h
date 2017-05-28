@@ -10,7 +10,7 @@
 
 @interface Screenshot : RLMObject
 
-@property (nonatomic, assign) uint64_t screenshotID;
+@property (nonatomic, assign) int64_t screenshotID;
 @property (nonatomic, copy) NSString *thumbnailURL;
 @property (nonatomic, copy) NSString *fullImageURL;
 

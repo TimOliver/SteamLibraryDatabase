@@ -10,4 +10,6 @@
 
 @implementation Developer
 
++ (NSString *)primaryKey { return @"name"; }
+
 @end

@@ -18,8 +18,9 @@
 @interface Game : RLMObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, assign) uint64_t appID;
+@property (nonatomic, assign) int64_t appID;
 @property (nonatomic, strong) NSDate *releaseDate;
+@property (nonatomic, strong) NSString *website;
 
 @property (nonatomic, copy) NSString *detailedDescription;
 @property (nonatomic, copy) NSString *aboutDescription;
@@ -38,7 +39,5 @@
 
 @property (nonatomic, copy) NSString *headerImageURL;
 @property (nonatomic, copy) NSString *backgroundImageURL;
-
-@property (nonatomic, copy) NSString *legalNotice;
 
 @end

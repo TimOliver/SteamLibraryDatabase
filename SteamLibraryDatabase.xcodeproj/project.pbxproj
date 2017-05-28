@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2245D6A11ED8D9E50006B284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6A01ED8D9E50006B284 /* main.m */; };
-		2245D6A41ED8D9E50006B284 /* TOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6A31ED8D9E50006B284 /* TOAppDelegate.m */; };
-		2245D6A71ED8D9E50006B284 /* TOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6A61ED8D9E50006B284 /* TOViewController.m */; };
-		2245D6AA1ED8D9E50006B284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2245D6A81ED8D9E50006B284 /* Main.storyboard */; };
-		2245D6AC1ED8D9E50006B284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2245D6AB1ED8D9E50006B284 /* Assets.xcassets */; };
-		2245D6AF1ED8D9E50006B284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2245D6AD1ED8D9E50006B284 /* LaunchScreen.storyboard */; };
 		2245D6BA1ED8D9E50006B284 /* SteamLibraryDatabaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6B91ED8D9E50006B284 /* SteamLibraryDatabaseTests.m */; };
-		2245D6C71ED91DD00006B284 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6C61ED91DD00006B284 /* Game.m */; };
-		2245D6CA1ED922A70006B284 /* PlatformRequirements.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6C91ED922A70006B284 /* PlatformRequirements.m */; };
-		2245D6CD1ED925E00006B284 /* Publisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6CC1ED925E00006B284 /* Publisher.m */; };
-		2245D6D01ED926B60006B284 /* Developer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6CF1ED926B60006B284 /* Developer.m */; };
-		2245D6D31ED9275D0006B284 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6D21ED9275D0006B284 /* Category.m */; };
-		2245D6D61ED927B00006B284 /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6D51ED927B00006B284 /* Genre.m */; };
-		2245D6D91ED927E40006B284 /* Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6D81ED927E40006B284 /* Screenshot.m */; };
-		2245D6DC1ED9289E0006B284 /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 2245D6DB1ED9289E0006B284 /* Movie.m */; };
+		22A4BA4D1EDA42DB00F5AC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A4BA441EDA42DB00F5AC9B /* Assets.xcassets */; };
+		22A4BA4E1EDA42DB00F5AC9B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A4BA451EDA42DB00F5AC9B /* LaunchScreen.storyboard */; };
+		22A4BA4F1EDA42DB00F5AC9B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22A4BA471EDA42DB00F5AC9B /* Info.plist */; };
+		22A4BA501EDA42DB00F5AC9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA481EDA42DB00F5AC9B /* main.m */; };
+		22A4BA511EDA42DB00F5AC9B /* TOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA4A1EDA42DB00F5AC9B /* TOAppDelegate.m */; };
+		22A4BA521EDA42DB00F5AC9B /* TOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA4C1EDA42DB00F5AC9B /* TOViewController.m */; };
+		22A4BA651EDA42EF00F5AC9B /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA561EDA42EF00F5AC9B /* Category.m */; };
+		22A4BA661EDA42EF00F5AC9B /* Developer.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA581EDA42EF00F5AC9B /* Developer.m */; };
+		22A4BA671EDA42EF00F5AC9B /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA5A1EDA42EF00F5AC9B /* Game.m */; };
+		22A4BA681EDA42EF00F5AC9B /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA5C1EDA42EF00F5AC9B /* Genre.m */; };
+		22A4BA691EDA42EF00F5AC9B /* Movie.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA5E1EDA42EF00F5AC9B /* Movie.m */; };
+		22A4BA6A1EDA42EF00F5AC9B /* PlatformRequirements.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA601EDA42EF00F5AC9B /* PlatformRequirements.m */; };
+		22A4BA6B1EDA42EF00F5AC9B /* Publisher.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA621EDA42EF00F5AC9B /* Publisher.m */; };
+		22A4BA6C1EDA42EF00F5AC9B /* Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA641EDA42EF00F5AC9B /* Screenshot.m */; };
+		22A4BA6F1EDA43E000F5AC9B /* TOSteamCatalogImporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA6E1EDA43E000F5AC9B /* TOSteamCatalogImporter.m */; };
+		22A4BA731EDA4A9A00F5AC9B /* App.m in Sources */ = {isa = PBXBuildFile; fileRef = 22A4BA721EDA4A9A00F5AC9B /* App.m */; };
 		671045A978F8C34B2CC39089 /* libPods-SteamLibraryDatabase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF020A75ED8EDD056E66EDBF /* libPods-SteamLibraryDatabase.a */; };
 		F8F8B4D14299F5E4C3172B40 /* libPods-SteamLibraryDatabaseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 49D2E44B598AD5FDD071E4B4 /* libPods-SteamLibraryDatabaseTests.a */; };
 /* End PBXBuildFile section */
@@ -39,34 +41,38 @@
 /* Begin PBXFileReference section */
 		06371D8A2DC39987FD1665F2 /* Pods-SteamLibraryDatabaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamLibraryDatabaseTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SteamLibraryDatabaseTests/Pods-SteamLibraryDatabaseTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2245D69C1ED8D9E50006B284 /* SteamLibraryDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SteamLibraryDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2245D6A01ED8D9E50006B284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2245D6A21ED8D9E50006B284 /* TOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOAppDelegate.h; sourceTree = "<group>"; };
-		2245D6A31ED8D9E50006B284 /* TOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOAppDelegate.m; sourceTree = "<group>"; };
-		2245D6A51ED8D9E50006B284 /* TOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOViewController.h; sourceTree = "<group>"; };
-		2245D6A61ED8D9E50006B284 /* TOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOViewController.m; sourceTree = "<group>"; };
-		2245D6A91ED8D9E50006B284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2245D6AB1ED8D9E50006B284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2245D6AE1ED8D9E50006B284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		2245D6B01ED8D9E50006B284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2245D6B51ED8D9E50006B284 /* SteamLibraryDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SteamLibraryDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2245D6B91ED8D9E50006B284 /* SteamLibraryDatabaseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SteamLibraryDatabaseTests.m; sourceTree = "<group>"; };
 		2245D6BB1ED8D9E50006B284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2245D6C51ED91DD00006B284 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		2245D6C61ED91DD00006B284 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
-		2245D6C81ED922A70006B284 /* PlatformRequirements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformRequirements.h; sourceTree = "<group>"; };
-		2245D6C91ED922A70006B284 /* PlatformRequirements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformRequirements.m; sourceTree = "<group>"; };
-		2245D6CB1ED925E00006B284 /* Publisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publisher.h; sourceTree = "<group>"; };
-		2245D6CC1ED925E00006B284 /* Publisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publisher.m; sourceTree = "<group>"; };
-		2245D6CE1ED926B60006B284 /* Developer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Developer.h; sourceTree = "<group>"; };
-		2245D6CF1ED926B60006B284 /* Developer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Developer.m; sourceTree = "<group>"; };
-		2245D6D11ED9275D0006B284 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
-		2245D6D21ED9275D0006B284 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
-		2245D6D41ED927B00006B284 /* Genre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genre.h; sourceTree = "<group>"; };
-		2245D6D51ED927B00006B284 /* Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Genre.m; sourceTree = "<group>"; };
-		2245D6D71ED927E40006B284 /* Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screenshot.h; sourceTree = "<group>"; };
-		2245D6D81ED927E40006B284 /* Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screenshot.m; sourceTree = "<group>"; };
-		2245D6DA1ED9289E0006B284 /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
-		2245D6DB1ED9289E0006B284 /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		22A4BA441EDA42DB00F5AC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22A4BA461EDA42DB00F5AC9B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22A4BA471EDA42DB00F5AC9B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22A4BA481EDA42DB00F5AC9B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		22A4BA491EDA42DB00F5AC9B /* TOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOAppDelegate.h; sourceTree = "<group>"; };
+		22A4BA4A1EDA42DB00F5AC9B /* TOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOAppDelegate.m; sourceTree = "<group>"; };
+		22A4BA4B1EDA42DB00F5AC9B /* TOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOViewController.h; sourceTree = "<group>"; };
+		22A4BA4C1EDA42DB00F5AC9B /* TOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOViewController.m; sourceTree = "<group>"; };
+		22A4BA551EDA42EF00F5AC9B /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		22A4BA561EDA42EF00F5AC9B /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		22A4BA571EDA42EF00F5AC9B /* Developer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Developer.h; sourceTree = "<group>"; };
+		22A4BA581EDA42EF00F5AC9B /* Developer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Developer.m; sourceTree = "<group>"; };
+		22A4BA591EDA42EF00F5AC9B /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		22A4BA5A1EDA42EF00F5AC9B /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		22A4BA5B1EDA42EF00F5AC9B /* Genre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genre.h; sourceTree = "<group>"; };
+		22A4BA5C1EDA42EF00F5AC9B /* Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Genre.m; sourceTree = "<group>"; };
+		22A4BA5D1EDA42EF00F5AC9B /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
+		22A4BA5E1EDA42EF00F5AC9B /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		22A4BA5F1EDA42EF00F5AC9B /* PlatformRequirements.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformRequirements.h; sourceTree = "<group>"; };
+		22A4BA601EDA42EF00F5AC9B /* PlatformRequirements.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformRequirements.m; sourceTree = "<group>"; };
+		22A4BA611EDA42EF00F5AC9B /* Publisher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Publisher.h; sourceTree = "<group>"; };
+		22A4BA621EDA42EF00F5AC9B /* Publisher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Publisher.m; sourceTree = "<group>"; };
+		22A4BA631EDA42EF00F5AC9B /* Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Screenshot.h; sourceTree = "<group>"; };
+		22A4BA641EDA42EF00F5AC9B /* Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Screenshot.m; sourceTree = "<group>"; };
+		22A4BA6D1EDA43E000F5AC9B /* TOSteamCatalogImporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOSteamCatalogImporter.h; sourceTree = "<group>"; };
+		22A4BA6E1EDA43E000F5AC9B /* TOSteamCatalogImporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOSteamCatalogImporter.m; sourceTree = "<group>"; };
+		22A4BA701EDA44A200F5AC9B /* TOSteamConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOSteamConstants.h; sourceTree = "<group>"; };
+		22A4BA711EDA4A9A00F5AC9B /* App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = App.h; sourceTree = "<group>"; };
+		22A4BA721EDA4A9A00F5AC9B /* App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = App.m; sourceTree = "<group>"; };
 		49D2E44B598AD5FDD071E4B4 /* libPods-SteamLibraryDatabaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SteamLibraryDatabaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5780E8590CC9626383998FE4 /* Pods-SteamLibraryDatabaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamLibraryDatabaseTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SteamLibraryDatabaseTests/Pods-SteamLibraryDatabaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		A319434B0F5969556F2FA7AA /* Pods-SteamLibraryDatabase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SteamLibraryDatabase.release.xcconfig"; path = "Pods/Target Support Files/Pods-SteamLibraryDatabase/Pods-SteamLibraryDatabase.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,7 +103,8 @@
 		2245D6931ED8D9E50006B284 = {
 			isa = PBXGroup;
 			children = (
-				2245D69E1ED8D9E50006B284 /* SteamLibraryDatabase */,
+				22A4BA531EDA42EF00F5AC9B /* SteamLibraryDatabase */,
+				22A4BA431EDA42DB00F5AC9B /* SteamLibraryDatabaseApp */,
 				2245D6B81ED8D9E50006B284 /* SteamLibraryDatabaseTests */,
 				2245D69D1ED8D9E50006B284 /* Products */,
 				A16B2287D49EB06002569BEF /* Pods */,
@@ -114,31 +121,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2245D69E1ED8D9E50006B284 /* SteamLibraryDatabase */ = {
-			isa = PBXGroup;
-			children = (
-				2245D6C41ED91D4C0006B284 /* Models */,
-				2245D6A21ED8D9E50006B284 /* TOAppDelegate.h */,
-				2245D6A31ED8D9E50006B284 /* TOAppDelegate.m */,
-				2245D6A51ED8D9E50006B284 /* TOViewController.h */,
-				2245D6A61ED8D9E50006B284 /* TOViewController.m */,
-				2245D6A81ED8D9E50006B284 /* Main.storyboard */,
-				2245D6AB1ED8D9E50006B284 /* Assets.xcassets */,
-				2245D6AD1ED8D9E50006B284 /* LaunchScreen.storyboard */,
-				2245D6B01ED8D9E50006B284 /* Info.plist */,
-				2245D69F1ED8D9E50006B284 /* Supporting Files */,
-			);
-			path = SteamLibraryDatabase;
-			sourceTree = "<group>";
-		};
-		2245D69F1ED8D9E50006B284 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				2245D6A01ED8D9E50006B284 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 		2245D6B81ED8D9E50006B284 /* SteamLibraryDatabaseTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,25 +130,53 @@
 			path = SteamLibraryDatabaseTests;
 			sourceTree = "<group>";
 		};
-		2245D6C41ED91D4C0006B284 /* Models */ = {
+		22A4BA431EDA42DB00F5AC9B /* SteamLibraryDatabaseApp */ = {
 			isa = PBXGroup;
 			children = (
-				2245D6C51ED91DD00006B284 /* Game.h */,
-				2245D6C61ED91DD00006B284 /* Game.m */,
-				2245D6C81ED922A70006B284 /* PlatformRequirements.h */,
-				2245D6C91ED922A70006B284 /* PlatformRequirements.m */,
-				2245D6CB1ED925E00006B284 /* Publisher.h */,
-				2245D6CC1ED925E00006B284 /* Publisher.m */,
-				2245D6CE1ED926B60006B284 /* Developer.h */,
-				2245D6CF1ED926B60006B284 /* Developer.m */,
-				2245D6D11ED9275D0006B284 /* Category.h */,
-				2245D6D21ED9275D0006B284 /* Category.m */,
-				2245D6D41ED927B00006B284 /* Genre.h */,
-				2245D6D51ED927B00006B284 /* Genre.m */,
-				2245D6D71ED927E40006B284 /* Screenshot.h */,
-				2245D6D81ED927E40006B284 /* Screenshot.m */,
-				2245D6DA1ED9289E0006B284 /* Movie.h */,
-				2245D6DB1ED9289E0006B284 /* Movie.m */,
+				22A4BA441EDA42DB00F5AC9B /* Assets.xcassets */,
+				22A4BA451EDA42DB00F5AC9B /* LaunchScreen.storyboard */,
+				22A4BA471EDA42DB00F5AC9B /* Info.plist */,
+				22A4BA481EDA42DB00F5AC9B /* main.m */,
+				22A4BA491EDA42DB00F5AC9B /* TOAppDelegate.h */,
+				22A4BA4A1EDA42DB00F5AC9B /* TOAppDelegate.m */,
+				22A4BA4B1EDA42DB00F5AC9B /* TOViewController.h */,
+				22A4BA4C1EDA42DB00F5AC9B /* TOViewController.m */,
+			);
+			path = SteamLibraryDatabaseApp;
+			sourceTree = "<group>";
+		};
+		22A4BA531EDA42EF00F5AC9B /* SteamLibraryDatabase */ = {
+			isa = PBXGroup;
+			children = (
+				22A4BA541EDA42EF00F5AC9B /* Models */,
+				22A4BA6D1EDA43E000F5AC9B /* TOSteamCatalogImporter.h */,
+				22A4BA6E1EDA43E000F5AC9B /* TOSteamCatalogImporter.m */,
+				22A4BA701EDA44A200F5AC9B /* TOSteamConstants.h */,
+			);
+			path = SteamLibraryDatabase;
+			sourceTree = "<group>";
+		};
+		22A4BA541EDA42EF00F5AC9B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				22A4BA711EDA4A9A00F5AC9B /* App.h */,
+				22A4BA721EDA4A9A00F5AC9B /* App.m */,
+				22A4BA551EDA42EF00F5AC9B /* Category.h */,
+				22A4BA561EDA42EF00F5AC9B /* Category.m */,
+				22A4BA571EDA42EF00F5AC9B /* Developer.h */,
+				22A4BA581EDA42EF00F5AC9B /* Developer.m */,
+				22A4BA591EDA42EF00F5AC9B /* Game.h */,
+				22A4BA5A1EDA42EF00F5AC9B /* Game.m */,
+				22A4BA5B1EDA42EF00F5AC9B /* Genre.h */,
+				22A4BA5C1EDA42EF00F5AC9B /* Genre.m */,
+				22A4BA5D1EDA42EF00F5AC9B /* Movie.h */,
+				22A4BA5E1EDA42EF00F5AC9B /* Movie.m */,
+				22A4BA5F1EDA42EF00F5AC9B /* PlatformRequirements.h */,
+				22A4BA601EDA42EF00F5AC9B /* PlatformRequirements.m */,
+				22A4BA611EDA42EF00F5AC9B /* Publisher.h */,
+				22A4BA621EDA42EF00F5AC9B /* Publisher.m */,
+				22A4BA631EDA42EF00F5AC9B /* Screenshot.h */,
+				22A4BA641EDA42EF00F5AC9B /* Screenshot.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -281,9 +291,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2245D6AF1ED8D9E50006B284 /* LaunchScreen.storyboard in Resources */,
-				2245D6AC1ED8D9E50006B284 /* Assets.xcassets in Resources */,
-				2245D6AA1ED8D9E50006B284 /* Main.storyboard in Resources */,
+				22A4BA4D1EDA42DB00F5AC9B /* Assets.xcassets in Resources */,
+				22A4BA4E1EDA42DB00F5AC9B /* LaunchScreen.storyboard in Resources */,
+				22A4BA4F1EDA42DB00F5AC9B /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,17 +404,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2245D6DC1ED9289E0006B284 /* Movie.m in Sources */,
-				2245D6A71ED8D9E50006B284 /* TOViewController.m in Sources */,
-				2245D6A41ED8D9E50006B284 /* TOAppDelegate.m in Sources */,
-				2245D6CA1ED922A70006B284 /* PlatformRequirements.m in Sources */,
-				2245D6D61ED927B00006B284 /* Genre.m in Sources */,
-				2245D6D31ED9275D0006B284 /* Category.m in Sources */,
-				2245D6A11ED8D9E50006B284 /* main.m in Sources */,
-				2245D6D01ED926B60006B284 /* Developer.m in Sources */,
-				2245D6D91ED927E40006B284 /* Screenshot.m in Sources */,
-				2245D6CD1ED925E00006B284 /* Publisher.m in Sources */,
-				2245D6C71ED91DD00006B284 /* Game.m in Sources */,
+				22A4BA521EDA42DB00F5AC9B /* TOViewController.m in Sources */,
+				22A4BA681EDA42EF00F5AC9B /* Genre.m in Sources */,
+				22A4BA6C1EDA42EF00F5AC9B /* Screenshot.m in Sources */,
+				22A4BA691EDA42EF00F5AC9B /* Movie.m in Sources */,
+				22A4BA731EDA4A9A00F5AC9B /* App.m in Sources */,
+				22A4BA501EDA42DB00F5AC9B /* main.m in Sources */,
+				22A4BA511EDA42DB00F5AC9B /* TOAppDelegate.m in Sources */,
+				22A4BA6A1EDA42EF00F5AC9B /* PlatformRequirements.m in Sources */,
+				22A4BA6B1EDA42EF00F5AC9B /* Publisher.m in Sources */,
+				22A4BA671EDA42EF00F5AC9B /* Game.m in Sources */,
+				22A4BA6F1EDA43E000F5AC9B /* TOSteamCatalogImporter.m in Sources */,
+				22A4BA651EDA42EF00F5AC9B /* Category.m in Sources */,
+				22A4BA661EDA42EF00F5AC9B /* Developer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,18 +439,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2245D6A81ED8D9E50006B284 /* Main.storyboard */ = {
+		22A4BA451EDA42DB00F5AC9B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2245D6A91ED8D9E50006B284 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		2245D6AD1ED8D9E50006B284 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2245D6AE1ED8D9E50006B284 /* Base */,
+				22A4BA461EDA42DB00F5AC9B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -544,7 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				INFOPLIST_FILE = SteamLibraryDatabase/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SteamLibraryDatabaseApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.SteamLibraryDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -557,7 +561,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				INFOPLIST_FILE = SteamLibraryDatabase/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/SteamLibraryDatabaseApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.timoliver.SteamLibraryDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,4 +10,12 @@
 
 @implementation Genre
 
++ (NSString *)primaryKey { return @"genreID"; }
+
++ (NSDictionary *)JSONInboundMappingDictionary
+{
+    return @{@"id" : @"genreID",
+             @"description" : @"name"};
+}
+
 @end

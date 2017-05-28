@@ -10,4 +10,12 @@
 
 @implementation Category
 
++ (NSString *)primaryKey { return @"categoryID"; }
+
++ (NSDictionary *)JSONInboundMappingDictionary
+{
+    return @{@"id" : @"categoryID",
+             @"description" : @"name"};
+}
+
 @end

@@ -10,7 +10,7 @@
 
 @interface Movie : RLMObject
 
-@property (nonatomic, assign) uint64_t movieID;
+@property (nonatomic, assign) int64_t movieID;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *thumbnailURL;
 @property (nonatomic, copy) NSString *smallMovieURL;

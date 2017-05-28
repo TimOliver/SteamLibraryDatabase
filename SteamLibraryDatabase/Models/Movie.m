@@ -10,5 +10,15 @@
 
 @implementation Movie
 
++ (NSDictionary *)JSONInboundMappingDictionary
+{
+    return @{@"id" : @"movieID",
+             @"name" : @"name",
+             @"thumbnail" : @"thumbnailURL",
+             @"webm.480" : @"smallMovieURL",
+             @"webm.max" : @"maxMovieURL",
+             @"highlight" : @"highlight"};
+}
+
 @end
 
