@@ -75,6 +75,15 @@
     dateToFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
     game[@"release_date"] = [dateToFormatter stringFromDate:date];
 
+    NSDictionary *pcRequirements = game[@"pc_requirements"];
+    if (pcRequirements.count == 0) { [game removeObjectForKey:@"pc_requirements"]; }
+
+    NSDictionary *macRequirements = game[@"mac_requirements"];
+    if (macRequirements.count == 0) { [game removeObjectForKey:@"mac_requirements"]; }
+
+    NSDictionary *linuxRequirements = game[@"linux_requirements"];
+    if (linuxRequirements.count == 0) { [game removeObjectForKey:@"linux_requirements"]; }
+
     return game;
 }
 

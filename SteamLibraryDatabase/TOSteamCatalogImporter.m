@@ -27,7 +27,6 @@
 
 @property (nonatomic, strong) AFURLSessionManager *sessionManager;
 
-@property (nonatomic, strong) NSURL *steamCatalogRealmURL;
 @property (nonatomic, readonly) RLMRealmConfiguration *catalogRealmConfiguration;
 @property (nonatomic, readonly) RLMRealm *catalogRealm;
 
@@ -46,15 +45,11 @@
     if (self = [super init]) {
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
         _sessionManager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
-    }
 
-    return self;
-}
+        NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+        _steamCatalogRealmURL = [documentsURL URLByAppendingPathComponent:@"SteamDatabase.realm"];
 
-- (instancetype)initWithRealmFileURL:(NSURL *)fileURL
-{
-    if (self = [self init]) {
-        _steamCatalogRealmURL = fileURL;
+        _downloadFolderURL = [documentsURL URLByAppendingPathComponent:@"SteamCatalog"];
     }
 
     return self;
@@ -62,6 +57,16 @@
 
 - (void)startImporting
 {
+
+}
+
+- (void)startDownloadingCatalog
+{
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    if ([fileManager fileExistsAtPath:self.downloadFolderURL.path isDirectory:nil] == NO) {
+        [fileManager createDirectoryAtPath:self.downloadFolderURL.path withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+
     if (self.cacheRealm.isEmpty) {
         [self requestContentsForCacheRealm];
         return;
@@ -72,8 +77,35 @@
     [self.requestTimer invalidate];
     self.requestTimer = [NSTimer scheduledTimerWithTimeInterval:kTOSteamAppURLRateLimit repeats:YES block:^(NSTimer * _Nonnull timer) {
         App *app = self.pendingApps.firstObject;
-        [self importApp:app];
+        [self downloadJSONForApp:app];
     }];
+}
+
+- (void)downloadJSONForApp:(App *)app
+{
+    NSString *formattedAppURL = [NSString stringWithFormat:kTOSteamAppURL, @(app.appID)];
+    NSURL *URL = [NSURL URLWithString:formattedAppURL];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+
+    [app.realm transactionWithBlock:^{
+        app.downloaded = YES;
+    }];
+
+    int64_t appID = app.appID;
+
+    NSURLSessionDownloadTask *downloadTask = [self.sessionManager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
+        NSString *fileName = [NSString stringWithFormat:@"%lld.json", appID];
+        return [self.downloadFolderURL URLByAppendingPathComponent:fileName];
+    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [app.realm transactionWithBlock:^{
+                    app.downloaded = NO;
+                }];
+            });
+        }
+    }];
+    [downloadTask resume];
 }
 
 - (void)importApp:(App *)app

@@ -16,4 +16,4 @@ NSString * const kTOSteamAppListURL = @"https://api.steampowered.com/ISteamApps/
 NSString * const kTOSteamAppURL = @"https://store.steampowered.com/api/appdetails/?appids=%@";
 
 /** The URL is rate limited to 200 every 5 minutes, or 1 every 1.5 seconds. */
-CGFloat const kTOSteamAppURLRateLimit = 1.5f;
+CGFloat const kTOSteamAppURLRateLimit = 2.0f;

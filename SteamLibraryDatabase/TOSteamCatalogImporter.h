@@ -12,10 +12,17 @@
 
 @interface TOSteamCatalogImporter : NSObject
 
-- (instancetype)initWithRealmFileURL:(NSURL *)fileURL;
+/* A folder to download the JSON data to */
+@property (nonatomic, copy) NSURL *downloadFolderURL;
+
+/* The location of the Realm file that will store all of the data */
+@property (nonatomic, strong) NSURL *steamCatalogRealmURL;
 
 /* Get a copy of the Realm configuration used to control this Realm container */
 @property (nonatomic, readonly) RLMRealmConfiguration *steamCatalogRealmConfiguration;
+
+/* Dump all Steam entity pages to disk */
+- (void)startDownloadingCatalog;
 
 /* Start importing game info from Steam */
 - (void)startImporting;

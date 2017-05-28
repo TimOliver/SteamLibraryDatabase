@@ -20,10 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    NSURL *documentsURL = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
-    NSURL *realmFileURL = [documentsURL URLByAppendingPathComponent:@"SteamDatabase.realm"];
-
-    self.importer = [[TOSteamCatalogImporter alloc] initWithRealmFileURL:realmFileURL];
+    self.importer = [[TOSteamCatalogImporter alloc] init];
 
     UIBarButtonItem *startButton = [[UIBarButtonItem alloc] initWithTitle:@"Start" style:UIBarButtonItemStylePlain target:self action:@selector(start)];
     self.navigationItem.rightBarButtonItem = startButton;
@@ -31,7 +28,7 @@
 
 - (void)start
 {
-    [self.importer startImporting];
+    [self.importer startDownloadingCatalog];
 }
 
 - (void)didReceiveMemoryWarning {
