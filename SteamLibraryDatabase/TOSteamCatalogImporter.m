@@ -25,13 +25,14 @@
 
 @interface TOSteamCatalogImporter ()
 
+@property (nonatomic, assign) BOOL importing;
+
 @property (nonatomic, strong) AFURLSessionManager *sessionManager;
 
 @property (nonatomic, readonly) RLMRealmConfiguration *catalogRealmConfiguration;
 @property (nonatomic, readonly) RLMRealm *catalogRealm;
 
-@property (nonatomic, readonly) RLMRealmConfiguration *cacheConfiguration;
-@property (nonatomic, strong) RLMRealm *cacheRealm;
+@property (nonatomic, readonly) RLMRealm *appsRealm;
 @property (nonatomic, strong) RLMResults *pendingApps;
 
 @property (nonatomic, strong) NSTimer *requestTimer;
@@ -62,23 +63,55 @@
 
 - (void)startDownloadingCatalog
 {
+    if (self.importing) {
+        return;
+    }
+
+    self.importing = YES;
+
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:self.downloadFolderURL.path isDirectory:nil] == NO) {
         [fileManager createDirectoryAtPath:self.downloadFolderURL.path withIntermediateDirectories:YES attributes:nil error:nil];
     }
 
-    if (self.cacheRealm.isEmpty) {
+    if (self.appsRealm.isEmpty) {
         [self requestContentsForCacheRealm];
         return;
     }
 
-    self.pendingApps = [App objectsInRealm:self.cacheRealm where:@"downloaded == 0"];
+    self.pendingApps = [App objectsInRealm:self.appsRealm where:@"downloaded == 0"];
+
+
+    BOOL hasChanges = NO;
+
+    [self.appsRealm beginWriteTransaction];
+
+    for (App *app in self.pendingApps) {
+        NSURL *fileURL = [self fileURLForAppWithID:app.appID];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:fileURL.path]) {
+            app.downloaded = YES;
+            hasChanges = YES;
+        }
+    }
+
+    if (hasChanges) {
+        [self.appsRealm commitWriteTransaction];
+    }
+    else {
+        [self.appsRealm cancelWriteTransaction];
+    }
 
     [self.requestTimer invalidate];
     self.requestTimer = [NSTimer scheduledTimerWithTimeInterval:kTOSteamAppURLRateLimit repeats:YES block:^(NSTimer * _Nonnull timer) {
         App *app = self.pendingApps.firstObject;
         [self downloadJSONForApp:app];
     }];
+}
+
+- (NSURL *)fileURLForAppWithID:(int64_t)appID
+{
+    NSString *fileName = [NSString stringWithFormat:@"%lld.json", appID];
+    return [self.downloadFolderURL URLByAppendingPathComponent:fileName];
 }
 
 - (void)downloadJSONForApp:(App *)app
@@ -94,16 +127,18 @@
     int64_t appID = app.appID;
 
     NSURLSessionDownloadTask *downloadTask = [self.sessionManager downloadTaskWithRequest:request progress:nil destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        NSString *fileName = [NSString stringWithFormat:@"%lld.json", appID];
-        return [self.downloadFolderURL URLByAppendingPathComponent:fileName];
+        return [self fileURLForAppWithID:appID];
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        if (error) {
-            dispatch_async(dispatch_get_main_queue(), ^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
                 [app.realm transactionWithBlock:^{
                     app.downloaded = NO;
                 }];
-            });
-        }
+                return;
+            }
+
+            NSLog(@"Downloaded '%lld - %@'", app.appID, app.name);
+        });
     }];
     [downloadTask resume];
 }
@@ -198,17 +233,17 @@
     NSArray *appList = contents[@"applist"][@"apps"];
     if (appList == nil) { return; }
 
-    [self.cacheRealm transactionWithBlock:^{
-        [App createOrUpdateInRealm:self.cacheRealm withJSONArray:appList];
+    [self.appsRealm transactionWithBlock:^{
+        [App createOrUpdateInRealm:self.appsRealm withJSONArray:appList];
     }];
 
     [self startImporting];
 }
 
-- (RLMRealmConfiguration *)cacheConfiguration
+- (RLMRealmConfiguration *)steamAppsRealmConfiguration
 {
-    NSString *cacheDirectory = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES).firstObject;
-    NSString *cacheFilePath = [cacheDirectory stringByAppendingPathComponent:@"SteamAppCache.realm"];
+    NSString *cacheDirectory = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    NSString *cacheFilePath = [cacheDirectory stringByAppendingPathComponent:@"SteamApps.realm"];
 
     RLMRealmConfiguration *configuration = [[RLMRealmConfiguration alloc] init];
     configuration.fileURL = [NSURL fileURLWithPath:cacheFilePath];
@@ -216,12 +251,9 @@
     return configuration;
 }
 
-- (RLMRealm *)cacheRealm
+- (RLMRealm *)appsRealm
 {
-    if (_cacheRealm) { return _cacheRealm; }
-
-    _cacheRealm = [RLMRealm realmWithConfiguration:self.cacheConfiguration error:nil];
-    return _cacheRealm;
+    return [RLMRealm realmWithConfiguration:self.steamAppsRealmConfiguration error:nil];
 }
 
 @end

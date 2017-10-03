@@ -19,11 +19,15 @@ PODS:
   - Realm+JSON (0.2.16):
     - Realm
   - Realm/Headers (2.7.0)
+  - Reveal-SDK (8)
+  - TOScrollBar (0.0.3)
 
 DEPENDENCIES:
   - AFNetworking
   - Realm
   - Realm+JSON (from `https://github.com/TimOliver/Realm-JSON.git`)
+  - Reveal-SDK
+  - TOScrollBar
 
 EXTERNAL SOURCES:
   Realm+JSON:
@@ -38,7 +42,9 @@ SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   Realm: 07e5d3a9e0e41d65fd5f9f05150ed6295d0f093b
   Realm+JSON: 8799479b330b5d696e93356dc277b2bc329c9644
+  Reveal-SDK: 43be4e662864e937960d0d04d005135e29c4e53b
+  TOScrollBar: dc89faade3d5411be7c565efbd7057c4a5c8faf2
 
-PODFILE CHECKSUM: dca06d2e14d58a0dd92518ff84257b572798c6ce
+PODFILE CHECKSUM: 4f5b25b206f0cdb00a10e3c27dfe8980cb7ff175
 
 COCOAPODS: 1.2.1

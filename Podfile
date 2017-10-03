@@ -8,6 +8,8 @@ target 'SteamLibraryDatabase' do
   pod 'Realm'
   pod 'AFNetworking'
   pod 'Realm+JSON', :git => 'https://github.com/TimOliver/Realm-JSON.git'
+  pod 'TOScrollBar'
+  pod 'Reveal-SDK', :configurations => ['Debug']
 
   target 'SteamLibraryDatabaseTests' do
     inherit! :search_paths

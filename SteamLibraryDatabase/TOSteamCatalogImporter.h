@@ -21,6 +21,9 @@
 /* Get a copy of the Realm configuration used to control this Realm container */
 @property (nonatomic, readonly) RLMRealmConfiguration *steamCatalogRealmConfiguration;
 
+/* Get a copy of the Realm configuration used to control the app List */
+@property (nonatomic, readonly) RLMRealmConfiguration *steamAppsRealmConfiguration;
+
 /* Dump all Steam entity pages to disk */
 - (void)startDownloadingCatalog;
 
